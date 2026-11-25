@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>솔바람 펜션</title>
+  <meta name="description" content="숲속에서 쉬어가는 솔바람 펜션 — 객실 소개, 요금, 오시는 길, 예약 문의" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="nav">
+    <a href="#" class="logo">솔바람 펜션</a>
+    <nav>
+      <a href="#about">소개</a>
+      <a href="#rooms">객실</a>
+      <a href="#location">오시는 길</a>
+      <a href="#contact" class="btn-sm">예약 문의</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <p class="eyebrow">FOREST STAY</p>
+      <h1>소나무 숲 사이,<br />조용히 쉬어가는 곳</h1>
+      <p>계곡 소리와 바람 소리만 들리는 독채형 펜션에서 일상을 잠시 내려놓으세요.</p>
+      <a href="#contact" class="btn">예약 문의하기</a>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <h2>펜션 소개</h2>
+    <div class="features">
+      <div class="feature"><h3>숲속 독채</h3><p>객실마다 떨어져 있어 다른 손님을 신경 쓰지 않고 쉴 수 있어요.</p></div>
+      <div class="feature"><h3>개별 바비큐</h3><p>모든 객실 테라스에 바비큐 그릴이 있어요. 숯과 그릴은 준비해 드려요.</p></div>
+      <div class="feature"><h3>계곡 산책로</h3><p>펜션 뒤편으로 5분만 걸으면 맑은 계곡과 산책로가 이어져요.</p></div>
+    </div>
+  </section>
+
+  <section id="rooms" class="section alt">
+    <h2>객실 안내</h2>
+    <div class="rooms">
+      <article class="room">
+        <div class="room-img r1"></div>
+        <div class="room-body">
+          <h3>솔잎방</h3>
+          <p>기준 2인 · 최대 3인 · 퀸 침대</p>
+          <p class="price">주중 120,000원 · 주말 160,000원</p>
+        </div>
+      </article>
+      <article class="room">
+        <div class="room-img r2"></div>
+        <div class="room-body">
+          <h3>바람채</h3>
+          <p>기준 4인 · 최대 6인 · 복층 구조</p>
+          <p class="price">주중 180,000원 · 주말 240,000원</p>
+        </div>
+      </article>
+      <article class="room">
+        <div class="room-img r3"></div>
+        <div class="room-body">
+          <h3>숲속별채</h3>
+          <p>기준 6인 · 최대 8인 · 개별 스파</p>
+          <p class="price">주중 260,000원 · 주말 340,000원</p>
+        </div>
+      </article>
+    </div>
+    <p class="note">입실 15:00 · 퇴실 11:00 · 기준 인원 초과 시 1인당 20,000원</p>
+  </section>
+
+  <section id="location" class="section">
+    <h2>오시는 길</h2>
+    <div class="location">
+      <div class="map">지도 영역<br /><small>카카오맵·네이버 지도 퍼가기 코드로 교체하세요</small></div>
+      <ul class="info">
+        <li><strong>주소</strong> 강원도 ○○군 ○○면 솔바람길 12</li>
+        <li><strong>전화</strong> 010-0000-0000</li>
+        <li><strong>자가용</strong> ○○IC에서 약 15분</li>
+        <li><strong>대중교통</strong> ○○터미널에서 픽업 가능 (사전 문의)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact" class="section alt">
+    <h2>예약 문의</h2>
+    <p class="sub">남겨주시면 확인 후 연락드릴게요.</p>
+    <form id="inquiry-form" class="form">
+      <div class="row">
+        <label>이름<input name="name" required maxlength="50" /></label>
+        <label>연락처<input name="phone" type="tel" required maxlength="20" placeholder="010-0000-0000" /></label>
+      </div>
+      <div class="row">
+        <label>객실
+          <select name="room" required>
+            <option value="솔잎방">솔잎방</option>
+            <option value="바람채">바람채</option>
+            <option value="숲속별채">숲속별채</option>
+          </select>
+        </label>
+        <label>인원<input name="guests" type="number" min="1" max="8" value="2" required /></label>
+      </div>
+      <div class="row">
+        <label>입실일<input name="check_in" type="date" required /></label>
+        <label>퇴실일<input name="check_out" type="date" required /></label>
+      </div>
+      <label>요청사항<textarea name="message" rows="3" maxlength="500"></textarea></label>
+      <button type="submit" class="btn">문의 보내기</button>
+      <p id="form-status" class="status" role="status"></p>
+    </form>
+  </section>
+
+  <footer class="footer">© 솔바람 펜션 · 사업자등록번호 000-00-00000</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
